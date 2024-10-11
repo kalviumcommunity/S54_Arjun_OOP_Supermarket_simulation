@@ -3,6 +3,7 @@ package src;
 public class Product {
     protected String name;
     protected double price;
+    
 
     public Product(String name, double price) {
         this.name = name;
@@ -14,7 +15,9 @@ public class Product {
         System.out.println("Price: $" + this.price);
     }
 
+
     public double getPrice() {
         return this.price;
     }
+
 }
