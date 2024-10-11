@@ -32,7 +32,10 @@ public class Customer {
             System.out.println("----------------------");
         }
     }
-
+    
+    public static int getCustomerCount() {
+        return customerCount;
+    }
 
     public void deleteCustomer() {
         customerCount--;

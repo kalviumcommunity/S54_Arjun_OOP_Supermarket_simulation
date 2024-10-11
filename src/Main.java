@@ -22,6 +22,9 @@ public class Main {
         customer2.displayCustomerDetails();
         customer2.displayShoppingList();
 
+        System.out.println("Total Products Created: " + Product.getProductCount());
+        System.out.println("Total Customers Created: " + Customer.getCustomerCount());
+
         product1.deleteProduct();
         product2.deleteProduct();
         product3.deleteProduct();
@@ -30,5 +33,8 @@ public class Main {
 
         customer1.deleteCustomer();
         customer2.deleteCustomer();
+
+        System.out.println("Products remaining after deletion: " + Product.getProductCount());
+        System.out.println("Customers remaining after deletion: " + Customer.getCustomerCount());
     }
 }
