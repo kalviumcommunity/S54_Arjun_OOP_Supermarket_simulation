@@ -11,6 +11,10 @@ public class Product {
         productCount++;
     }
 
+    public static int getProductCount() {
+        return productCount;
+    }
+
     public void displayDetails() {
         System.out.println("Product Name: " + this.name);
         System.out.println("Price: $" + this.price);
