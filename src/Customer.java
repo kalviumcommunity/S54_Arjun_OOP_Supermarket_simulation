@@ -6,10 +6,13 @@ public class Customer {
     private int customerID;
     private ArrayList<Product> shoppingList;
 
+    private static int customerCount = 0;
+
     public Customer(String name, int customerID) {
         this.name = name;
         this.customerID = customerID;
         this.shoppingList = new ArrayList<>();
+        customerCount++;
     }
 
     public void displayCustomerDetails() {
@@ -30,4 +33,9 @@ public class Customer {
         }
     }
 
+
+    public void deleteCustomer() {
+        customerCount--;
+        System.out.println("Customer deleted: " + this.name);
+    }
 }
