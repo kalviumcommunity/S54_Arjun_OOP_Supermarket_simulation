@@ -5,6 +5,7 @@ public class Main {
         Product product2 = new Product("Conditioner", 6.99);
         Product product3 = new PerishableProduct("Milk", 2.49, 7);
         Product product4 = new PerishableProduct("Bread", 1.99, 3);
+        Product product5 = new PerishableProduct("Cheese", 4.50, 10);
 
         Customer customer1 = new Customer("Alice", 101);
         Customer customer2 = new Customer("Bob", 102);
@@ -20,5 +21,14 @@ public class Main {
 
         customer2.displayCustomerDetails();
         customer2.displayShoppingList();
+
+        product1.deleteProduct();
+        product2.deleteProduct();
+        product3.deleteProduct();
+        product4.deleteProduct();
+        product5.deleteProduct();
+
+        customer1.deleteCustomer();
+        customer2.deleteCustomer();
     }
 }
