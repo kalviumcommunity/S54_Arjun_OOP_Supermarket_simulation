@@ -82,4 +82,3 @@ Once the project is running, you’ll see the following actions:
 ## 💬 Contributing
 
 Contributions are welcome! Feel free to fork this repository, make changes, and submit pull requests. For suggestions or issues, open an issue in the repository.
-
