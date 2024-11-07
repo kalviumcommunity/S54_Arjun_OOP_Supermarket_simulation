@@ -1,14 +1,37 @@
 package src;
 
 public class Product {
-    protected String name;
-    protected double price;
+    private String name;
+    private double price;
+    
     private static int productCount = 0;
+
+    public Product() {
+        this.name = "Unnamed";
+        this.price = 0.0;
+        productCount++;
+    }
 
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
         productCount++;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public static int getProductCount() {
@@ -20,13 +43,8 @@ public class Product {
         System.out.println("Price: $" + this.price);
     }
 
-    public double getPrice() {
-        return this.price;
-    }
-
     public void deleteProduct() {
         productCount--;
         System.out.println("Product deleted: " + this.name);
     }
-
 }
