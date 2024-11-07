@@ -8,13 +8,6 @@ public class Customer {
 
     private static int customerCount = 0;
 
-    public Customer() {
-        this.name = "Unnamed Customer";
-        this.customerID = 0;
-        this.shoppingList = new ArrayList<>();
-        customerCount++;
-    }
-
     public Customer(String name, int customerID) {
         this.name = name;
         this.customerID = customerID;
