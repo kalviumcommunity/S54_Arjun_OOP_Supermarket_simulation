@@ -1,6 +1,6 @@
 package src;
 
-public class Product {
+public class Product extends BaseProduct{
     private String name;
     private double price;
 
@@ -23,7 +23,8 @@ public class Product {
     public static int getProductCount() {
         return productCount;
     }
-
+    
+    @Override
     public void displayDetails() {
         System.out.println("Product Name: " + this.name);
         System.out.println("Price: $" + this.price);

@@ -5,7 +5,9 @@ public class Customer {
     private String name;
     private int customerID;
     private ArrayList<Product> shoppingList;
+    
     private static int customerCount=0;
+
     public Customer(String name, int customerID) {
         this.name = name;
         this.customerID = customerID;
