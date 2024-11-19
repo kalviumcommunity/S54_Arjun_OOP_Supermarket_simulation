@@ -14,3 +14,4 @@ public class PerishableProduct extends Product {
         System.out.println("Expires in: " + this.expiryDays + " days");
     }
 }
+
