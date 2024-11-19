@@ -6,6 +6,12 @@ public class Product {
     
     private static int productCount = 0;
 
+    public Product() {
+        this.name = "Unnamed";
+        this.price = 0.0;
+        productCount++;
+    }
+
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
