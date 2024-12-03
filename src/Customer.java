@@ -1,24 +1,22 @@
 package src;
-import java.util.ArrayList;
 
 public class Customer {
     private String name;
     private int customerID;
-    private ArrayList<Product> shoppingList;
-    
+    private ShoppingCart shoppingCart;  
     private static int customerCount=0;
 
     public Customer(String name, int customerID) {
         this.name = name;
         this.customerID = customerID;
-        this.shoppingList = new ArrayList<>();
+        this.shoppingCart = new ShoppingCart();
         customerCount++;
     }
-
-    public Customer(String name) {
+        public Customer(String name) {
         this.name = name;
         this.customerID = 0;
-        this.shoppingList = new ArrayList<>();
+        this.shoppingCart = new ShoppingCart();
+        customerCount++;
     }
 
     public void displayCustomerDetails() {
@@ -26,25 +24,20 @@ public class Customer {
         System.out.println("Customer ID: " + this.customerID);
     }
 
-    public static int getCustomerCount() {
-        return customerCount;
-    }
-
     public void addProductToShoppingList(Product product) {
-        shoppingList.add(product);
-        System.out.println(product.getName() + " added to " + this.name + "'s shopping list.");
+        shoppingCart.addProductToShoppingList(product);
     }
 
     public void displayShoppingList() {
-        System.out.println(this.name + "'s Shopping List:");
-        for (Product product : shoppingList) {
-            product.displayDetails();
-            System.out.println("----------------------");
-        }
+        shoppingCart.displayShoppingList();
     }
-    
+
     public void deleteCustomer() {
         customerCount--;
         System.out.println("Customer deleted: " + this.name);
+    }
+
+    public static int getCustomerCount() {
+        return customerCount;
     }
 }
