@@ -10,7 +10,8 @@ public class PerishableProduct extends Product {
 
     @Override
     public void displayDetails() {
-        super.displayDetails();
+        System.out.println("Product Name: " + this.name);
+        System.out.println("Price: $" + this.price);
         System.out.println("Expires in: " + this.expiryDays + " days");
     }
 }
